@@ -119,7 +119,7 @@ Tip: For every day, we only care about one single trip with the longest distance
 - 2019-10-11
 - 2019-10-24
 - 2019-10-26
-- 2019-10-31
+- 2019-10-31 <-
 
 
 ## Question 5. Three biggest pickup zones
@@ -129,7 +129,7 @@ Which were the top pickup locations with over 13,000 in
 
 Consider only `lpep_pickup_datetime` when filtering by date.
  
-- East Harlem North, East Harlem South, Morningside Heights
+- East Harlem North, East Harlem South, Morningside Heights <-
 - East Harlem North, Morningside Heights
 - Morningside Heights, Astoria Park, East Harlem South
 - Bedford, East Harlem North, Astoria Park
