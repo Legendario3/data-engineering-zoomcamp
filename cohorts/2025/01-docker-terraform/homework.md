@@ -22,11 +22,13 @@ Run docker with the `python:3.12.8` image in an interactive mode, use the entryp
 
 What's the version of `pip` in the image?
 
-- 24.3.1
+- 24.3.1 <-
 - 24.2.1
 - 23.3.1
 - 23.2.1
-
+### Answer:
+![First Run](./image/q1a.png)
+![Second Run](./image/q1b.png)
 
 ## Question 2. Understanding Docker networking and docker-compose
 
@@ -68,7 +70,7 @@ volumes:
 - localhost:5432
 - db:5433
 - postgres:5432
-- db:5432
+- db:5432 <-
 
 If there are more than one answers, select only one of them
 
@@ -104,7 +106,7 @@ During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusi
 Answers:
 
 - 104,802;  197,670;  110,612;  27,831;  35,281
-- 104,802;  198,924;  109,603;  27,678;  35,189
+- 104,802;  198,924;  109,603;  27,678;  35,189 <-
 - 104,793;  201,407;  110,612;  27,831;  35,281
 - 104,793;  202,661;  109,603;  27,678;  35,189
 - 104,838;  199,013;  109,645;  27,688;  35,202
