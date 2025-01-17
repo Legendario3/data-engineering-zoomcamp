@@ -26,14 +26,37 @@ group by
 order by 2 desc
 limit 1;
 
-SELECT z."Zone", sum(t.total_amount) FROM ny_taxi.public.yellow_taxi_trips t
+SELECT z."Zone", sum(t.total_amount) as total FROM ny_taxi.public.yellow_taxi_trips t
                                              inner join zones z on z."LocationID"=t."PULocationID"
 where
     DATE(t.lpep_pickup_datetime) = '2019-10-18'
 
 group by
     z."Zone"
+having sum(t.total_amount)  > 13000
 order by 2 desc
 
 ;
+SELECT zdrop."Zone" as "Drop Zone"
+     ,zpickup."Zone" as "Pickup Zone"
+     ,extract(year from t.lpep_pickup_datetime) as "Year"
+     ,extract(month from t.lpep_pickup_datetime) as "month"
+     , max(t.tip_amount) as max_tip
+FROM ny_taxi.public.yellow_taxi_trips t
+    inner join zones zpickup on zpickup."LocationID"=t."PULocationID"
+    inner join zones zdrop on zdrop."LocationID"=t."DOLocationID"
+ where
+    extract(year from t.lpep_pickup_datetime) = 2019
+    and extract(month from t.lpep_pickup_datetime) = 10
+    and zpickup."Zone" = 'East Harlem North'
+
+group by
+    zdrop."Zone"
+       ,zpickup."Zone"
+    ,extract(year from t.lpep_pickup_datetime)
+    ,extract(month from t.lpep_pickup_datetime)
+order by max_tip desc
+
+;
+
 
