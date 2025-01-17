@@ -70,6 +70,7 @@ volumes:
 - postgres:5432
 - db:5432 <-
 
+Reason: the internal network will use the interal port
 
 ##  Prepare Postgres
 
@@ -92,6 +93,7 @@ You can use the code from the course. It's up to you whether
 you want to use Jupyter or a python script.
 
 ## Question 3. Trip Segmentation Count
+### for this question i am using the sql in homework_part3.sql file and in homeworkpart3.ipynb
 
 During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusive), how many trips, **respectively**, happened:
 1. Up to 1 mile
@@ -176,6 +178,7 @@ Answers:
 - terraform init, terraform apply -auto-aprove, terraform destroy <-
 - terraform import, terraform apply -y, terraform rm
 
+used: terraform apply -help
 
 ## Submitting the solutions
 
